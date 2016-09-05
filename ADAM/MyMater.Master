@@ -1,0 +1,364 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MyMater.master.cs" Inherits="ADAM.MyMater" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="MyStyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style="width: 100%">
+                <tr>
+                    <td style="text-align: center; font-size: xx-large; color: #FFFFFF;">
+                        <asp:Image ID="Image2" runat="server" Width="450px" Height="45" ImageUrl="~/Image/Movie1.gif" />
+                    </td>
+
+                    <td style="text-align: left">
+                        <asp:Image ID="Image1" runat="server" Width="150px" Height="100px" ImageUrl="~/Image/logo.png" /></td>
+                </tr>
+            </table>
+        </div>
+        <hr />
+        <div>
+            <ul id="navmenu">
+                <li>
+                    <a href="#">البيانات العامة</a>
+                    <ul class="sub1">
+                        <li>
+                            <a href="#">ادخال البيانات</a>
+                            <ul class="sub2">
+                                <li><a href="../MainData/webCountry.aspx">الدول</a></li>
+                                <li><a href="../MainData/webCity.aspx">المحافظات</a></li>
+                                <li><a href="../MainData/webGovernorateData.aspx">المدن</a></li>
+                                <li><a href="../MainData/webArea.aspx">المناطق</a></li>
+                                <li><a href="../MainData/webQualificationsData.aspx">المؤهلات</a></li>
+                                <li><a href="../MainData/webClientData.aspx">العملاء</a></li>
+                                <li><a href="../MainData/webSupplierTypeData.aspx">أنواع الموردين</a></li>
+                                <li><a href="../MainData/webSupplierData.aspx">الموردين</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">عرض التقارير</a>
+                            <ul class="sub2">
+                                <li><a href="../MainReport/webCountryReport.aspx">الدول</a></li>
+                                <li><a href="../MainReport/webCityReport.aspx">المحافظات</a></li>
+                                <li><a href="../MainReport/webGovernorateReport.aspx">المدن</a></li>
+                                <li><a href="../MainReport/webAreaReport.aspx">المناطق</a></li>
+                                <li><a href="../MainReport/webQualificationsReport.aspx">المؤهلات</a></li>
+                                <li><a href="../MainReport/rptClientReport.aspx">العملاء</a></li>
+                                <li><a href="../MainReport/webSupplierTypeReport.aspx">أنواع الموردين</a></li>
+                                <li><a href="../MainReport/webSupplierReport.aspx">الموردين</a></li>
+                                <li><a href="../MainReport/webEmployeeClientReport.aspx">مندوبي العملاء</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">بيانات الشركة</a>
+                    <ul class="sub1">
+                        <li>
+                            <a href="#">ادخال البيانات</a>
+                            <ul class="sub2">
+                                <li><a href="../MainData/webDepartment.aspx">الادارات</a></li>
+                                <li><a href="../MainData/webdivision.aspx">الاقسام</a></li>
+                                <li><a href="../MainData/webJobsData.aspx">الوظائف</a></li>
+                                <li><a href="../MainData/webEmployeeData.aspx">الموظفين</a></li>
+                                <li><a href="../MainData/webUsers.aspx">المستخدمين</a></li>
+                                <li><a href="../MainData/webPermission.aspx">الصلاحيات</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">عرض التقارير</a>
+                            <ul class="sub2">
+                                <li><a href="../MainReport/webDepartmentReport.aspx">الادارات</a></li>
+                                <li><a href="../MainReport/webDivisionReport.aspx">الاقسام</a></li>
+                                <li><a href="../MainReport/webJobsReport.aspx">الوظائف</a></li>
+                                <li><a href="../MainReport/webEmployeeReport.aspx">الموظفين</a></li>
+                                <li><a href="../MainReport/webUsersReport.aspx">المستخدمين</a></li>
+                                <li><a href="../MainReport/webPermissionReport.aspx">الصلاحيات</a></li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">بيانات الاصناف</a>
+                    <ul class="sub1">
+                        <li>
+                            <a href="#">ادخال البيانات</a>
+                            <ul class="sub2">
+                                <li><a href="../MainData/webItemType.aspx">المخازن</a></li>
+                                <li><a href="../MainData/wenItemUnit.aspx">وحدات الاصناف</a></li>
+                                <li><a href="../MainData/wemPointOfSales.aspx">نقاط البيع</a></li>
+                                <li><a href="../MainData/webItemLocation.aspx">Location</a></li>
+                                <li><a href="../MainData/webItemColor.aspx">الوان الاصناف</a></li>
+                                <li><a href="../MainData/webProductionLine.aspx">خطوط الانتاج</a></li>
+                                <li><a href="../MainData/webItemStatus.aspx">نوع المنتج</a></li>
+                                <li><a href="../MainData/webItemTypeProductionLine.aspx">ربط المخزن بخط الانتاج</a></li>
+                                <li><a href="../MainData/webItemsGroup.aspx">مجموعات الاصناف</a></li>
+                                <li><a href="../MainData/webItems.aspx">الاصناف</a></li>
+                                <li><a href="../MainData/webItemColorSelected.aspx">تحديد الوان الاصناف</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">عرض التقارير</a>
+                            <ul class="sub2">
+                                <li><a href="../MainReport/webItemTypeReport.aspx">المخازن</a></li>
+                                <li><a href="../MainReport/webItemUnitReport.aspx">وحدات الاصناف</a></li>
+                                <li><a href="../MainReport/webPointOfSaleReport.aspx">نقاط البيع</a></li>
+                                <li><a href="../MainReport/webItemLocationReport.aspx">Location</a></li>
+                                <li><a href="../MainReport/webItemColorReport.aspx">الوان الاصناف</a></li>
+                                <li><a href="../MainReport/webProductionLine.aspx">خطوط الانتاج</a></li>
+                                <li><a href="../MainReport/webItemGroupData.aspx">مجموعات الاصناف</a></li>
+                                <li><a href="../MainReport/webItemReport.aspx">الاصناف</a></li>
+                                <li><a href="../MainReport/webProductionLineItemReport.aspx">أصناف خطوط الانتاج</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">المشتريات</a>
+                    <ul class="sub1">
+                        <li>
+                            <a href="#">ادخال البيانات</a>
+                            <ul class="sub2">
+                                <li><a href="../PurchaseData/webPurchaseOrderData.aspx">أنشاء طلب الشراء</a></li>
+                                <li><a href="../PurchaseData/webConformPurchaseOrder.aspx">أعتماد طلب الشراء</a></li>
+                                <li><a href="../PurchaseData/webFollowUpPurchaseOrder.aspx">متابعة طلبات الشراء</a></li>
+                                <li><a href="../PurchaseData/webSupplyOrderData.aspx">أنشاء امر توريد</a></li>
+                                <li><a href="../PurchaseData/webPricingSupplyOrder.aspx">تسعير امر توريد</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">عرض التقارير</a>
+                            <ul class="sub2">
+                                <li><a href="../PurchaseReport/webPurchaseOrderRepot.aspx">طلب غير معتمد</a></li>
+                                <li><a href="../PurchaseReport/webAllUnConfomedPurchaseOrder.aspx">طلبات غير المعتمدة</a></li>
+                                <li><a href="../PurchaseReport/webConformPurchaseOrderReport.aspx">طلب معتمد</a></li>
+                                <li><a href="../PurchaseReport/webAllConformPurchaseOrder.aspx">طلبات معتمد</a></li>
+                                <li><a href="../PurchaseReport/webAllPurchaseOrderReport.aspx">متابعة جميع الطلبات</a></li>
+                                <li><a href="../PurchaseReport/webSupplyOrderData.aspx">طباعة امر توريد</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">المخازن</a>
+                    <ul class="sub1">
+                        <%-- <li>
+                            <a href="#">ادخال البيانات</a>
+                            <ul class="sub2">
+                                <li><a href="../StoreData/webInsertFirstTimeBalance.aspx">ادخال رصيد الاصناف</a></li>
+                                <li><a href="../StoreData/webUpdateFirstTimeBalance.aspx">تعديل رصيد الاصناف</a></li>
+                                <li><a href="../StoreData/webRecordReceiptData.aspx">أنشاء محضر الاستلام</a></li>
+                                <li><a href="../StoreData/webUpdateRecordReceiptData.aspx">تعديل محضر استلام</a></li>
+                                <li><a href="../StoreData/webConformAudit.aspx">أعتماد اخطار الفحص</a></li>
+                                <li><a href="../StoreData/webExchangeRequest.aspx">أنشاء طلب صرف</a></li>
+                                <li><a href="../StoreData/webUpdateExchangeRequest.aspx">تعديل طلب صرف</a></li>
+                                <li><a href="../StoreData/webDisExchangeReqest.aspx">صرف طلب صرف</a></li>
+                                <li><a href="../StoreData/webDierctSellOrderData.aspx">طلب صرف بيع مباشر</a></li>
+                                <li><a href="../StoreData/webRefluxOrder.aspx">طلب ارتجاع</a></li>
+                                <li><a href="../StoreData/webUpdateRefluxOrederData.aspx">تعديل طلب ارتجاع</a></li>
+                                <li><a href="../StoreData/webDisRefluxOrder.aspx">شاشة ارتجاع اصناف</a></li>
+                                <li><a href="../StoreData/webConvertBetweenMainQtyAndTester.aspx">شاشة تحويلات الارصدة</a></li>
+                            </ul>
+                        </li>--%>
+                        <li>
+                            <a href="#">ادخال البيانات</a>
+                            <ul class="sub2">
+                                <li><a href="../StoreData/webInsertFirstTimeBalance.aspx">ادخال رصيد الاصناف</a></li>
+                                <li><a href="../StoreData/webRecordReceiptData.aspx">أنشاء محضر الاستلام</a></li>
+                                <li><a href="../StoreData/webUpdateRecordReceiptData.aspx">تعديل محضر استلام</a></li>
+                                <li><a href="../StoreData/webConformAudit.aspx">أعتماد اخطار الفحص</a></li>
+                                <li><a href="../StoreData/webConvertBetweenMainQtyAndTester.aspx">شاشة تحويلات الارصدة</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">طلبات الصرف</a>
+                            <ul class="sub2">
+                                <li><a href="../StoreData/webExchangeRequest.aspx">أنشاء طلب صرف</a></li>
+                                <li><a href="../StoreData/webUpdateExchangeRequest.aspx">تعديل طلب صرف</a></li>
+                                <li><a href="../StoreData/webDisExchangeReqest.aspx">صرف طلب صرف</a></li>
+                                <li><a href="../StoreData/webDierctSellOrderData.aspx">طلب صرف بيع مباشر</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">طلبات الارتجاع</a>
+                            <ul class="sub2">
+                                <li><a href="../StoreData/webRefluxOrder.aspx">طلب ارتجاع</a></li>
+                                <li><a href="../StoreData/webUpdateRefluxOrederData.aspx">تعديل طلب ارتجاع</a></li>
+                                <li><a href="../StoreData/webDisRefluxOrder.aspx">شاشة ارتجاع اصناف</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">عرض التقارير</a>
+                            <ul class="sub2">
+                                <li><a href="../StoreReport/webFirstTimwBalanceReport.aspx">تقرير رصيد اول مدة</a></li>
+                                <li><a href="../StoreReport/webRecordReceiptReport.aspx">تقرير محضر الاستلام</a></li>
+                                <li><a href="../StoreReport/webCheckAuditReport.aspx">تقرير اخطار الفحص</a></li>
+                                <li><a href="../StoreReport/webAuditReport.aspx">تقرير محضر الفحص</a></li>
+                                <li><a href="../StoreReport/webIncommingOrderReport.aspx">تقرير أذن الوارد</a></li>
+                                <li><a href="../StoreReport/webExchangeRequestReport.aspx">تقرير طلب صرف</a></li>
+                                <li><a href="../StoreReport/webrptExchangeRequestOrderReport.aspx">تقرير أذن صرف</a></li>
+                                <li><a href="../StoreReport/webrptDierctSellOreder.aspx">تقرير صرف بيع مباشر</a></li>
+                                <li><a href="../StoreReport/webrptRefluxHeaderData.aspx">تقرير طلب أرتجاع</a></li>
+                                <li><a href="../StoreReport/webItemBinCard.aspx">كارت الصنف</a></li>
+                                <li><a href="../StoreReport/webStoreBalanceReport.aspx">أرصدة المخازن</a></li>
+                                <li><a href="../StoreReport/webItemGroupBalance.aspx">أرصدة مجموعات الاصناف</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../BasicData/webHomePage.aspx">الانتاج</a>
+                    <ul class="sub1">
+                        <li>
+                            <a href="#">ادخال البيانات</a>
+                            <ul class="sub2">
+                                <li><a href="../Prodction/webItemContentData.aspx">أدخال بيانات التركيبات</a></li>
+                                <li><a href="../Prodction/webProductionOrder.aspx">أنشاء امر انتاج</a></li>
+                                <li><a href="../Prodction/webDisProductionOrder.aspx">صرف امر انتاج</a></li>
+                                <li><a href="../Prodction/webUpdateItemContent.aspx">تعديل بيانات التركيبات</a></li>
+                                <li><a href="../Prodction/webDeliveryOrder.aspx">طلب تسليم منتج تام</a></li>
+                                <li><a href="../Prodction/webAcceptedDeliveryOrder.aspx">أعتماد تسليم منتج تام</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">التقارير</a>
+                            <ul class="sub2">
+                                <li><a href="../ProductionReport/webContentReport.aspx">تقرير التركيبات</a></li>
+                                <li><a href="../ProductionReport/webProductionOrderReport.aspx">تقرير أمر الانتاج</a></li>
+                                <li><a href="../ProductionReport/webDeliveryOrderReport.aspx">تقرير طلب منتج تام</a></li>
+                                <li><a href="../ProductionReport/webAcceeptedDeliveryOrder.aspx">تقرير أعتماد منتج تام</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../BasicData/webHomePage.aspx">التسويق</a>
+                    <ul class="sub1">
+                        <li>
+                            <a href="#">ادخال البيانات</a>
+                            <ul class="sub2">
+                                <li><a href="../Sales/webItemPrice.aspx">أدخال اسعار الاصناف</a></li>
+                                <li><a href="../Sales/webMaterialPrice.aspx">تسعير صرف خامات</a></li>
+                                <li><a href="../Sales/webCommodityPrice.aspx">تسعير صرف بضاعة</a></li>
+                                <li><a href="../Sales/webcorruptedPricing.aspx">تسعير صرف تالف</a></li>
+                                <li><a href="../Sales/webGiftsPricing.aspx">تسعير صرف هدايا</a></li>
+                                <li><a href="../Sales/webAskedOrderPricing.aspx">تسعير صرف عهده</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">التقارير</a>
+                            <ul class="sub2">
+                                <li><a href="../SalesReport/WebRowExchangePricingReport.aspx">تقرير تسعير خامات</a></li>
+                                <li><a href="../SalesReport/webCommdityPricingReport.aspx">تقرير تسعير بضاعة</a></li>
+                                <li><a href="../SalesReport/webCorruptedPricingReport.aspx">تقرير تسعير تالف</a></li>
+                                <li><a href="../SalesReport/webGiftPricing.aspx">تقرير تسعير هدايا</a></li>
+                                <li><a href="../SalesReport/webAskedOrderReport.aspx">تقرير تسعير عهده</a></li>
+                                <li><a href="../StoreReport/webrptPointForEmployee.aspx">تقرير النقاط</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../BasicData/webHomePage.aspx">التكاليف</a>
+                    <ul class="sub1">
+                        <li>
+                            <a href="#">ادخال البيانات</a>
+                            <ul class="sub2">
+                                <li><a href="../Costs/webUpdateIncomingOrder.aspx">تسعير اوامر التوريد</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">التقارير</a>
+                            <ul class="sub2">
+                                <li><a href="../CostsReport/webStoreCheckReport.aspx">كشف الجرد</a></li>
+                                <li><a href="../CostsReport/webrptItemFollowUp.aspx">متابعة الاصناف</a></li>
+                                <li><a href="../CostsReport/webPurchaseOrderFollowUp.aspx">متابعة طلبات الشراء</a></li>
+                                <li><a href="../CostsReport/webrptSupplierFollowUp.aspx">متابعة الموردين</a></li>
+                                <li><a href="../CostsReport/webrptClientFollowUp.aspx">متابعة العملاء</a></li>
+                                <li><a href="../CostsReport/webrptExchangeReqestFollowUp.aspx">متابعة طلبات الصرف</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../BasicData/webHomePage.aspx">الحسابات</a>
+                    <ul class="sub1">
+                        <li>
+                            <a href="#">ادخال البيانات</a>
+                            <ul class="sub2">
+                                <li><a href="../Account/webCurrencyData.aspx">ادخال العملات</a></li>
+                                <li><a href="../Account/webAccountData.aspx">ادخال الدليل المحاسبي</a></li>
+                                <li><a href="../Account/webCostCenter.aspx">ادخال مراكز التكلفة</a></li>
+                                <li><a href="../Account/webBox.aspx">ادخال الصناديق</a></li>
+                                <li><a href="../Account/webAccountHelper.aspx">الحسابات الاساسية</a></li>
+                                <li><a href="../Account/webInsertFirstBalance.aspx">ادخال الارصدة الافتتاحية</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">الحركات</a>
+                            <ul class="sub2">
+                                <li><a href="../Account/webJournal.aspx">القيود اليومية</a></li>
+                                <li><a href="../Account/webCashExpense.aspx">شاشة صرف نقدية</a></li>
+                                <li><a href="../Account/webCashReceipts.aspx">شاشة استلام نقدية</a></li>
+                                <li><a href="../Account/webPurchaseBill.aspx">شاشة فواتير الشراء</a></li>
+                                <li><a href="../Account/webSaleBill.aspx">شاشة فواتير البيع</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">الترحيلات</a>
+                            <ul class="sub2">
+                                <li><a href="../Account/webFirstJournalPosted.aspx">القيود الافتتاحية</a></li>
+                                <li><a href="../Account/WebPostedJournal.aspx">القيود اليومية</a></li>
+                                <li><a href="../Account/webCashExpensePosted.aspx">سندات الصرف</a></li>
+                                <li><a href="../Account/webCashReceiptsPosted.aspx">سندات القبض</a></li>
+                                <li><a href="../Account/webAcceptedSupplyOrderPosted.aspx">اوامر التوريد</a></li>
+                                <li><a href="../Account/webPurchaseBillPosted.aspx">فواتير الشراء</a></li>
+                                <li><a href="../Account/webSaleBillPosted.aspx">فواتير البيع</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">التقارير</a>
+                            <ul class="sub2">
+                                <li><a href="../AccountReport/webrptAccount.aspx">تقرير الدليل المحاسبي</a></li>
+                                <li><a href="../AccountReport/webrptFirstJournalBalance.aspx">تقرير القيود الافتتاحية</a></li>
+                                <li><a href="../AccountReport/webrptJournal.aspx">تقرير القيد اليومية</a></li>
+                                <li><a href="../AccountReport/webrptCashExpense.aspx">تقرير سندات الصرف</a></li>
+                                <li><a href="../AccountReport/webrptCashReceipt.aspx">تقرير سندات القبض</a></li>
+                                <li><a href="../AccountReport/webrptCurrency.aspx">تقرير العملات</a></li>
+                                <li><a href="../AccountReport/webrptBox.aspx">تقرير الصناديق</a></li>
+                                <li><a href="../AccountReport/webUnPostedJournal.aspx">القيود غير المرحلة</a></li>
+                                <li><a href="../AccountReport/webrptCostCenter.aspx">تقرير مراكز التكلفة</a></li>
+                                <li><a href="../AccountReport/webrptAccountStatement.aspx">تقرير كشف حساب</a></li>
+                                <li><a href="../AccountReport/webrptMezanElMorag3a.aspx">ميزان المراجعة</a></li>
+                                <li><a href="../AccountReport/webPrepareProfitAndLoss.aspx">الارباح والخسائر</a></li>
+                                <li><a href="../AccountReport/webrptBalanceSheet.aspx">الميزانية العمومية</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="../BasicData/webHomePage.aspx">الرئيسية</a></li>
+            </ul>
+        </div>
+
+        <div style="direction: rtl;">
+            <br />
+            <br />
+            <hr />
+            <asp:ContentPlaceHolder ID="pageAddress" runat="server">
+            </asp:ContentPlaceHolder>
+            <br />
+            <asp:ContentPlaceHolder ID="PageData" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <div style="text-align: center; color: white">
+            <p>Copyright &copy; <a href="#" style="color: white">Hossam El Din Khaled</a> | <a href="#" style="color: white">01224270473</a></p>
+            <p><a href="#" style="color: white">h0ssam5aled@yahoo.com</a></p>
+        </div>
+    </form>
+</body>
+</html>

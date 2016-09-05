@@ -1,0 +1,2697 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{02797628-F43E-448D-B130-49C00960FD9A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ADAM</RootNamespace>
+    <AssemblyName>ADAM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ConverNumToArabic">
+      <HintPath>..\..\..\..\ConverNumToArabic\ConverNumToArabic\bin\Debug\ConverNumToArabic.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccountReport\webPrepareProfitAndLoss.aspx" />
+    <Content Include="AccountReport\webrptAccount.aspx" />
+    <Content Include="AccountReport\webrptAccountStatement.aspx" />
+    <Content Include="AccountReport\webrptBalanceSheet.aspx" />
+    <Content Include="AccountReport\webrptBox.aspx" />
+    <Content Include="AccountReport\webrptCashExpense.aspx" />
+    <Content Include="AccountReport\webrptCashReceipt.aspx" />
+    <Content Include="AccountReport\webrptCostCenter.aspx" />
+    <Content Include="AccountReport\webrptCurrency.aspx" />
+    <Content Include="AccountReport\webrptFirstJournalBalance.aspx" />
+    <Content Include="AccountReport\webrptJournal.aspx" />
+    <Content Include="AccountReport\webrptMezanElMorag3a.aspx" />
+    <Content Include="AccountReport\webUnPostedJournal.aspx" />
+    <Content Include="Account\webAcceptedSupplyOrderPosted.aspx" />
+    <Content Include="Account\webAccountData.aspx" />
+    <Content Include="Account\webAccountHelper.aspx" />
+    <Content Include="Account\webBox.aspx" />
+    <Content Include="Account\webCashExpense.aspx" />
+    <Content Include="Account\webCashExpensePosted.aspx" />
+    <Content Include="Account\webCashReceipts.aspx" />
+    <Content Include="Account\webCashReceiptsPosted.aspx" />
+    <Content Include="Account\webCostCenter.aspx" />
+    <Content Include="Account\webCurrencyData.aspx" />
+    <Content Include="Account\webFirstJournalPosted.aspx" />
+    <Content Include="Account\webInsertFirstBalance.aspx" />
+    <Content Include="Account\webJournal.aspx" />
+    <Content Include="Account\WebPostedJournal.aspx" />
+    <Content Include="Account\webPurchaseBill.aspx" />
+    <Content Include="Account\webPurchaseBillPosted.aspx" />
+    <Content Include="Account\webSaleBill.aspx" />
+    <Content Include="Account\webSaleBillPosted.aspx" />
+    <Content Include="BasicData\GeneralFun.asmx" />
+    <Content Include="BasicData\webHomePage.aspx" />
+    <Content Include="BasicData\webLogIn.aspx" />
+    <Content Include="CostsReport\webPurchaseOrderFollowUp.aspx" />
+    <Content Include="CostsReport\webrptClientFollowUp.aspx" />
+    <Content Include="CostsReport\webrptExchangeReqestFollowUp.aspx" />
+    <Content Include="CostsReport\webrptItemFollowUp.aspx" />
+    <Content Include="CostsReport\webrptSupplierFollowUp.aspx" />
+    <Content Include="CostsReport\webStoreCheckReport.aspx" />
+    <Content Include="Costs\webUpdateIncomingOrder.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="FJScript.js" />
+    <Content Include="Image\1.png" />
+    <Content Include="Image\AIM 6.png" />
+    <Content Include="Image\APPLICATION FOLDER.png" />
+    <Content Include="Image\Cryo64 Genesis 3G %2880%29.png" />
+    <Content Include="Image\Delete.png" />
+    <Content Include="Image\Enter.png" />
+    <Content Include="Image\Exit.png" />
+    <Content Include="Image\ho0027-64.png" />
+    <Content Include="Image\Key.png" />
+    <Content Include="Image\logo.png" />
+    <Content Include="Image\logo2.png" />
+    <Content Include="Image\logo3.png" />
+    <Content Include="Image\LogOff.png" />
+    <Content Include="Image\Movie1.gif" />
+    <Content Include="Image\Oldlogo.jpg" />
+    <Content Include="Image\Report.png" />
+    <Content Include="Image\Save.png" />
+    <Content Include="Image\Undo.png" />
+    <Content Include="Image\View.png" />
+    <Content Include="Image\WMP.png" />
+    <Content Include="JScript.css" />
+    <Content Include="MainData\webArea.aspx" />
+    <Content Include="MainData\webCity.aspx" />
+    <Content Include="MainData\webClientData.aspx" />
+    <Content Include="MainData\webCountry.aspx" />
+    <Content Include="MainData\webDepartment.aspx" />
+    <Content Include="MainData\webdivision.aspx" />
+    <Content Include="MainData\webEmployeeData.aspx" />
+    <Content Include="MainData\webGovernorateData.aspx" />
+    <Content Include="MainData\webItemColor.aspx" />
+    <Content Include="MainData\webItemColorSelected.aspx" />
+    <Content Include="MainData\webItemLocation.aspx" />
+    <Content Include="MainData\webItems.aspx" />
+    <Content Include="MainData\webItemsGroup.aspx" />
+    <Content Include="MainData\webItemStatus.aspx" />
+    <Content Include="MainData\webItemType.aspx" />
+    <Content Include="MainData\webItemTypeProductionLine.aspx" />
+    <Content Include="MainData\webJobsData.aspx" />
+    <Content Include="MainData\webPermission.aspx" />
+    <Content Include="MainData\webProductionLine.aspx" />
+    <Content Include="MainData\webQualificationsData.aspx" />
+    <Content Include="MainData\webStoreData.aspx" />
+    <Content Include="MainData\webSupplierData.aspx" />
+    <Content Include="MainData\webSupplierTypeData.aspx" />
+    <Content Include="MainData\webUsers.aspx" />
+    <Content Include="MainData\wemPointOfSales.aspx" />
+    <Content Include="MainData\wenItemUnit.aspx" />
+    <Content Include="MainReport\rptClientReport.aspx" />
+    <Content Include="MainReport\webAreaReport.aspx" />
+    <Content Include="MainReport\webCityReport.aspx" />
+    <Content Include="MainReport\webCountryReport.aspx" />
+    <Content Include="MainReport\webDepartmentReport.aspx" />
+    <Content Include="MainReport\webDivisionReport.aspx" />
+    <Content Include="MainReport\webEmployeeClientReport.aspx" />
+    <Content Include="MainReport\webEmployeeReport.aspx" />
+    <Content Include="MainReport\webGovernorateReport.aspx" />
+    <Content Include="MainReport\webItemColorReport.aspx" />
+    <Content Include="MainReport\webItemGroupData.aspx" />
+    <Content Include="MainReport\webItemLocationReport.aspx" />
+    <Content Include="MainReport\webItemReport.aspx" />
+    <Content Include="MainReport\webItemTypeReport.aspx" />
+    <Content Include="MainReport\webItemUnitReport.aspx" />
+    <Content Include="MainReport\webJobsReport.aspx" />
+    <Content Include="MainReport\webPermissionReport.aspx" />
+    <Content Include="MainReport\webPointOfSaleReport.aspx" />
+    <Content Include="MainReport\webProductionLine.aspx" />
+    <Content Include="MainReport\webProductionLineItemReport.aspx" />
+    <Content Include="MainReport\webQualificationsReport.aspx" />
+    <Content Include="MainReport\webStoreReport.aspx" />
+    <Content Include="MainReport\webSupplierReport.aspx" />
+    <Content Include="MainReport\webSupplierTypeReport.aspx" />
+    <Content Include="MainReport\webUsersReport.aspx" />
+    <Content Include="MyStyle.css" />
+    <Content Include="PopUp.aspx" />
+    <Content Include="Prodction\webAcceptedDeliveryOrder.aspx" />
+    <Content Include="Prodction\webDeliveryOrder.aspx" />
+    <Content Include="Prodction\webDisProductionOrder.aspx" />
+    <Content Include="Prodction\webItemContentData.aspx" />
+    <Content Include="Prodction\webProductionOrder.aspx" />
+    <Content Include="Prodction\webUpdateItemContent.aspx" />
+    <Content Include="ProductionReport\webAcceeptedDeliveryOrder.aspx" />
+    <Content Include="ProductionReport\webContentReport.aspx" />
+    <Content Include="ProductionReport\webDeliveryOrderReport.aspx" />
+    <Content Include="ProductionReport\webProductionOrderReport.aspx" />
+    <Content Include="PurchaseData\webConformPurchaseOrder.aspx" />
+    <Content Include="PurchaseData\webFollowUpPurchaseOrder.aspx" />
+    <Content Include="PurchaseData\webPricingSupplyOrder.aspx" />
+    <Content Include="PurchaseData\webPurchaseOrderData.aspx" />
+    <Content Include="PurchaseData\webSupplyOrderData.aspx" />
+    <Content Include="PurchaseData\webUpdateSupplyOrder.aspx" />
+    <Content Include="PurchaseReport\webAllConformPurchaseOrder.aspx" />
+    <Content Include="PurchaseReport\webAllPurchaseOrderReport.aspx" />
+    <Content Include="PurchaseReport\webAllUnConfomedPurchaseOrder.aspx" />
+    <Content Include="PurchaseReport\webConformPurchaseOrderReport.aspx" />
+    <Content Include="PurchaseReport\webPurchaseOrderRepot.aspx" />
+    <Content Include="PurchaseReport\webSupplyOrderData.aspx" />
+    <Content Include="PurchaseReport\webSupplyOrderWithOutPrice.aspx" />
+    <Content Include="SalesReport\webAskedOrderReport.aspx" />
+    <Content Include="SalesReport\webCommdityPricingReport.aspx" />
+    <Content Include="SalesReport\webCorruptedPricingReport.aspx" />
+    <Content Include="SalesReport\webGiftPricing.aspx" />
+    <Content Include="SalesReport\WebRowExchangePricingReport.aspx" />
+    <Content Include="Sales\webAskedOrderPricing.aspx" />
+    <Content Include="Sales\webCommodityPrice.aspx" />
+    <Content Include="Sales\webcorruptedPricing.aspx" />
+    <Content Include="Sales\webGiftsPricing.aspx" />
+    <Content Include="Sales\webItemPrice.aspx" />
+    <Content Include="Sales\webMaterialPrice.aspx" />
+    <Content Include="SJScript.js" />
+    <Content Include="StoreData\webConformAudit.aspx" />
+    <Content Include="StoreData\webConvertBetweenMainQtyAndTester.aspx" />
+    <Content Include="StoreData\webDierctSellOrderData.aspx" />
+    <Content Include="StoreData\webDisExchangeReqest.aspx" />
+    <Content Include="StoreData\webDisRefluxOrder.aspx" />
+    <Content Include="StoreData\webExchangeRequest.aspx" />
+    <Content Include="StoreData\webInsertFirstTimeBalance.aspx" />
+    <Content Include="StoreData\webRecordReceiptData.aspx" />
+    <Content Include="StoreData\webRefluxOrder.aspx" />
+    <Content Include="StoreData\webUpdateExchangeRequest.aspx" />
+    <Content Include="StoreData\webUpdateFirstTimeBalance.aspx" />
+    <Content Include="StoreData\webUpdateRecordReceiptData.aspx" />
+    <Content Include="StoreData\webUpdateRefluxOrederData.aspx" />
+    <Content Include="StoreReport\webAuditReport.aspx" />
+    <Content Include="StoreReport\webCheckAuditReport.aspx" />
+    <Content Include="StoreReport\webExchangeRequestReport.aspx" />
+    <Content Include="StoreReport\webFirstTimwBalanceReport.aspx" />
+    <Content Include="StoreReport\webIncommingOrderReport.aspx" />
+    <Content Include="StoreReport\webItemBinCard.aspx" />
+    <Content Include="StoreReport\webItemGroupBalance.aspx" />
+    <Content Include="StoreReport\webRecordReceiptReport.aspx" />
+    <Content Include="StoreReport\webrptDierctSellOreder.aspx" />
+    <Content Include="StoreReport\webrptExchangeRequestOrderReport.aspx" />
+    <Content Include="StoreReport\webrptPointForEmployee.aspx" />
+    <Content Include="StoreReport\webrptRefluxHeaderData.aspx" />
+    <Content Include="StoreReport\webStoreBalanceReport.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountReport\Report\rptAccount.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAccount.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReport\Report\rptAccountStatement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAccountStatement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReport\Report\rptBalanceSheet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBalanceSheet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReport\Report\rptBoxData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBoxData.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReport\Report\rptCashExense.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCashExense.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReport\Report\rptCashReceipts.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCashReceipts.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReport\Report\rptCostCenter.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCostCenter.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReport\Report\rptCurrency.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCurrency.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReport\Report\rptFirstJournalBalance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFirstJournalBalance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReport\Report\rptJournal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptJournal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReport\Report\rptMezanElMorag3a.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMezanElMorag3a.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReport\Report\rptProfitAndLoss.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProfitAndLoss.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReport\Report\rptUnPostedJournal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptUnPostedJournal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountReport\webPrepareProfitAndLoss.aspx.cs">
+      <DependentUpon>webPrepareProfitAndLoss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountReport\webPrepareProfitAndLoss.aspx.designer.cs">
+      <DependentUpon>webPrepareProfitAndLoss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReport\webrptAccount.aspx.cs">
+      <DependentUpon>webrptAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountReport\webrptAccount.aspx.designer.cs">
+      <DependentUpon>webrptAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReport\webrptAccountStatement.aspx.cs">
+      <DependentUpon>webrptAccountStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountReport\webrptAccountStatement.aspx.designer.cs">
+      <DependentUpon>webrptAccountStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReport\webrptBalanceSheet.aspx.cs">
+      <DependentUpon>webrptBalanceSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountReport\webrptBalanceSheet.aspx.designer.cs">
+      <DependentUpon>webrptBalanceSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReport\webrptBox.aspx.cs">
+      <DependentUpon>webrptBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountReport\webrptBox.aspx.designer.cs">
+      <DependentUpon>webrptBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReport\webrptCashExpense.aspx.cs">
+      <DependentUpon>webrptCashExpense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountReport\webrptCashExpense.aspx.designer.cs">
+      <DependentUpon>webrptCashExpense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReport\webrptCashReceipt.aspx.cs">
+      <DependentUpon>webrptCashReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountReport\webrptCashReceipt.aspx.designer.cs">
+      <DependentUpon>webrptCashReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReport\webrptCostCenter.aspx.cs">
+      <DependentUpon>webrptCostCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountReport\webrptCostCenter.aspx.designer.cs">
+      <DependentUpon>webrptCostCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReport\webrptCurrency.aspx.cs">
+      <DependentUpon>webrptCurrency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountReport\webrptCurrency.aspx.designer.cs">
+      <DependentUpon>webrptCurrency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReport\webrptFirstJournalBalance.aspx.cs">
+      <DependentUpon>webrptFirstJournalBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountReport\webrptFirstJournalBalance.aspx.designer.cs">
+      <DependentUpon>webrptFirstJournalBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReport\webrptJournal.aspx.cs">
+      <DependentUpon>webrptJournal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountReport\webrptJournal.aspx.designer.cs">
+      <DependentUpon>webrptJournal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReport\webrptMezanElMorag3a.aspx.cs">
+      <DependentUpon>webrptMezanElMorag3a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountReport\webrptMezanElMorag3a.aspx.designer.cs">
+      <DependentUpon>webrptMezanElMorag3a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountReport\webUnPostedJournal.aspx.cs">
+      <DependentUpon>webUnPostedJournal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountReport\webUnPostedJournal.aspx.designer.cs">
+      <DependentUpon>webUnPostedJournal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webAcceptedSupplyOrderPosted.aspx.cs">
+      <DependentUpon>webAcceptedSupplyOrderPosted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webAcceptedSupplyOrderPosted.aspx.designer.cs">
+      <DependentUpon>webAcceptedSupplyOrderPosted.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webAccountData.aspx.cs">
+      <DependentUpon>webAccountData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webAccountData.aspx.designer.cs">
+      <DependentUpon>webAccountData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webAccountHelper.aspx.cs">
+      <DependentUpon>webAccountHelper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webAccountHelper.aspx.designer.cs">
+      <DependentUpon>webAccountHelper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webBox.aspx.cs">
+      <DependentUpon>webBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webBox.aspx.designer.cs">
+      <DependentUpon>webBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webCashExpense.aspx.cs">
+      <DependentUpon>webCashExpense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webCashExpense.aspx.designer.cs">
+      <DependentUpon>webCashExpense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webCashExpensePosted.aspx.cs">
+      <DependentUpon>webCashExpensePosted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webCashExpensePosted.aspx.designer.cs">
+      <DependentUpon>webCashExpensePosted.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webCashReceipts.aspx.cs">
+      <DependentUpon>webCashReceipts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webCashReceipts.aspx.designer.cs">
+      <DependentUpon>webCashReceipts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webCashReceiptsPosted.aspx.cs">
+      <DependentUpon>webCashReceiptsPosted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webCashReceiptsPosted.aspx.designer.cs">
+      <DependentUpon>webCashReceiptsPosted.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webCostCenter.aspx.cs">
+      <DependentUpon>webCostCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webCostCenter.aspx.designer.cs">
+      <DependentUpon>webCostCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webCurrencyData.aspx.cs">
+      <DependentUpon>webCurrencyData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webCurrencyData.aspx.designer.cs">
+      <DependentUpon>webCurrencyData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webFirstJournalPosted.aspx.cs">
+      <DependentUpon>webFirstJournalPosted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webFirstJournalPosted.aspx.designer.cs">
+      <DependentUpon>webFirstJournalPosted.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webInsertFirstBalance.aspx.cs">
+      <DependentUpon>webInsertFirstBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webInsertFirstBalance.aspx.designer.cs">
+      <DependentUpon>webInsertFirstBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webJournal.aspx.cs">
+      <DependentUpon>webJournal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webJournal.aspx.designer.cs">
+      <DependentUpon>webJournal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\WebPostedJournal.aspx.cs">
+      <DependentUpon>WebPostedJournal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\WebPostedJournal.aspx.designer.cs">
+      <DependentUpon>WebPostedJournal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webPurchaseBill.aspx.cs">
+      <DependentUpon>webPurchaseBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webPurchaseBill.aspx.designer.cs">
+      <DependentUpon>webPurchaseBill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webPurchaseBillPosted.aspx.cs">
+      <DependentUpon>webPurchaseBillPosted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webPurchaseBillPosted.aspx.designer.cs">
+      <DependentUpon>webPurchaseBillPosted.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webSaleBill.aspx.cs">
+      <DependentUpon>webSaleBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webSaleBill.aspx.designer.cs">
+      <DependentUpon>webSaleBill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\webSaleBillPosted.aspx.cs">
+      <DependentUpon>webSaleBillPosted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\webSaleBillPosted.aspx.designer.cs">
+      <DependentUpon>webSaleBillPosted.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\csGetPermission.cs" />
+    <Compile Include="BasicData\csJournal.cs" />
+    <Compile Include="BasicData\GeneralFun.asmx.cs">
+      <DependentUpon>GeneralFun.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BasicData\webHomePage.aspx.cs">
+      <DependentUpon>webHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\webHomePage.aspx.designer.cs">
+      <DependentUpon>webHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasicData\webLogIn.aspx.cs">
+      <DependentUpon>webLogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BasicData\webLogIn.aspx.designer.cs">
+      <DependentUpon>webLogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CostsReport\Reports\rptClientFollowUp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptClientFollowUp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CostsReport\Reports\rptExchangeReqestFollowUp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptExchangeReqestFollowUp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CostsReport\Reports\rptItemFollowUp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptItemFollowUp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CostsReport\Reports\rptPurchaseOrderFollowUp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPurchaseOrderFollowUp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CostsReport\Reports\rptStoreCheck.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptStoreCheck.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CostsReport\Reports\rptSupplierFollowUp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSupplierFollowUp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CostsReport\webPurchaseOrderFollowUp.aspx.cs">
+      <DependentUpon>webPurchaseOrderFollowUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CostsReport\webPurchaseOrderFollowUp.aspx.designer.cs">
+      <DependentUpon>webPurchaseOrderFollowUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CostsReport\webrptClientFollowUp.aspx.cs">
+      <DependentUpon>webrptClientFollowUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CostsReport\webrptClientFollowUp.aspx.designer.cs">
+      <DependentUpon>webrptClientFollowUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CostsReport\webrptExchangeReqestFollowUp.aspx.cs">
+      <DependentUpon>webrptExchangeReqestFollowUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CostsReport\webrptExchangeReqestFollowUp.aspx.designer.cs">
+      <DependentUpon>webrptExchangeReqestFollowUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CostsReport\webrptItemFollowUp.aspx.cs">
+      <DependentUpon>webrptItemFollowUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CostsReport\webrptItemFollowUp.aspx.designer.cs">
+      <DependentUpon>webrptItemFollowUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CostsReport\webrptSupplierFollowUp.aspx.cs">
+      <DependentUpon>webrptSupplierFollowUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CostsReport\webrptSupplierFollowUp.aspx.designer.cs">
+      <DependentUpon>webrptSupplierFollowUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CostsReport\webStoreCheckReport.aspx.cs">
+      <DependentUpon>webStoreCheckReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CostsReport\webStoreCheckReport.aspx.designer.cs">
+      <DependentUpon>webStoreCheckReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Costs\webUpdateIncomingOrder.aspx.cs">
+      <DependentUpon>webUpdateIncomingOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Costs\webUpdateIncomingOrder.aspx.designer.cs">
+      <DependentUpon>webUpdateIncomingOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Account.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\AccountHelper.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\AdamDataBata.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdamDataBata.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\AdamDataBata.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\AdamDataBata.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdamDataBata.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\AreaData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\AuditDetail.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\AuditHeader.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\BalanceSheet.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\BoxData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\CityData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ClientData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\CostCenter.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\CountryData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\CurrencyData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\DeliveryDataDetail.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\DeliveryDataHeader.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Department.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\DierctSellDetail.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\DirectSellData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\division.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\DocumentDetail.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\DocumentHeader.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\EmployeeData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ExchangeRequestDetailsData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ExchangeRequestHeaderData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ExchangeRequestPricing.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\FollowUpPurchaseOrder_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\GetAuditNo_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\GetIncommingOrder_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\GetProductionOrder_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\GetRecordReceiptNo_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\GetSupplyOrder_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\GovernorateData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\IncommingOrderData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Item.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ItemColor.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ItemColorSelected.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ItemContentDetail.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ItemContentHeader.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ItemLocation.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ItemMovement.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ItemPrice.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ItemsGroup.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ItemStatu.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ItemType.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ItemTypeProdcutionLine.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ItemUnit.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Job.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\JournalDetail.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\JournalHeader.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\JournalType.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\MasterAccountType.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\MovmentName.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Operation.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\PagesName.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\PaymentType.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Permission.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\PointOfSale.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ProductionDetailsOrder.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ProductionHeaderOrder.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ProductionLine.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\ProfitAndLoss.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\PurchaseItemStatu.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\PurchaseOrderHeader.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\PurchaseOredrDetail.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\QualificationsData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\RecordReceiptDetail.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\RecordReceiptHeader.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\RefluxDetailsData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\RefluxHeaderData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptAcceptedDeliveryOrder_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptAccountStatement_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptAccount_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptBalanceSheet_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptBoxData_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptClientFollowUp_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptContentReport_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptCostCenter_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptCurrencyData_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptDeliveryOrder_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptDierctSellOreder_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptDocument_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptExchangePrice_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptExchangeRequestOrderReport_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptExchangeRequestReport_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptFirstJournalBalance_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptFirstTimeBalance_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetArea_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetCity_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetClient_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetCountry_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetDepartment_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetDevision_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetEmployee_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetGovernorate_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetItemColor_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetItemType_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetItemUnit_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetItem_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetJobs_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetPermission_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetPointOfSale_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetProductionLine_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetPurchaseOrderData_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetQualifications_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetStores_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetSupplierType_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetSupplier_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGetUsers_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptGroupItemBalance_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptItemBinCard_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptItemFollowUp_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptItemGroups_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptItemLocation_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptJournal_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptMezanElMorag3a_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptPointForEmployee_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptProductionLineItems_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptProfitAndLoss_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptPurchaseOrderFollowUp_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptRefluxHeaderData_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptStoreBalance_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptStoreCheck_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\rptUnPostedJournal_Result.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\SexData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\StoreData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\SupplierData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\SupplierType.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\SupplyOrderDetail.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\SupplyOrderHeader.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\sysdiagram.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\UserData.cs">
+      <DependentUpon>AdamDataBata.tt</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webArea.aspx.cs">
+      <DependentUpon>webArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webArea.aspx.designer.cs">
+      <DependentUpon>webArea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webCity.aspx.cs">
+      <DependentUpon>webCity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webCity.aspx.designer.cs">
+      <DependentUpon>webCity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webClientData.aspx.cs">
+      <DependentUpon>webClientData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webClientData.aspx.designer.cs">
+      <DependentUpon>webClientData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webCountry.aspx.cs">
+      <DependentUpon>webCountry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webCountry.aspx.designer.cs">
+      <DependentUpon>webCountry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webDepartment.aspx.cs">
+      <DependentUpon>webDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webDepartment.aspx.designer.cs">
+      <DependentUpon>webDepartment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webdivision.aspx.cs">
+      <DependentUpon>webdivision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webdivision.aspx.designer.cs">
+      <DependentUpon>webdivision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webEmployeeData.aspx.cs">
+      <DependentUpon>webEmployeeData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webEmployeeData.aspx.designer.cs">
+      <DependentUpon>webEmployeeData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webGovernorateData.aspx.cs">
+      <DependentUpon>webGovernorateData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webGovernorateData.aspx.designer.cs">
+      <DependentUpon>webGovernorateData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webItemColor.aspx.cs">
+      <DependentUpon>webItemColor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webItemColor.aspx.designer.cs">
+      <DependentUpon>webItemColor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webItemColorSelected.aspx.cs">
+      <DependentUpon>webItemColorSelected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webItemColorSelected.aspx.designer.cs">
+      <DependentUpon>webItemColorSelected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webItemLocation.aspx.cs">
+      <DependentUpon>webItemLocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webItemLocation.aspx.designer.cs">
+      <DependentUpon>webItemLocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webItems.aspx.cs">
+      <DependentUpon>webItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webItems.aspx.designer.cs">
+      <DependentUpon>webItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webItemsGroup.aspx.cs">
+      <DependentUpon>webItemsGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webItemsGroup.aspx.designer.cs">
+      <DependentUpon>webItemsGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webItemStatus.aspx.cs">
+      <DependentUpon>webItemStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webItemStatus.aspx.designer.cs">
+      <DependentUpon>webItemStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webItemType.aspx.cs">
+      <DependentUpon>webItemType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webItemType.aspx.designer.cs">
+      <DependentUpon>webItemType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webItemTypeProductionLine.aspx.cs">
+      <DependentUpon>webItemTypeProductionLine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webItemTypeProductionLine.aspx.designer.cs">
+      <DependentUpon>webItemTypeProductionLine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webJobsData.aspx.cs">
+      <DependentUpon>webJobsData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webJobsData.aspx.designer.cs">
+      <DependentUpon>webJobsData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webPermission.aspx.cs">
+      <DependentUpon>webPermission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webPermission.aspx.designer.cs">
+      <DependentUpon>webPermission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webProductionLine.aspx.cs">
+      <DependentUpon>webProductionLine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webProductionLine.aspx.designer.cs">
+      <DependentUpon>webProductionLine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webQualificationsData.aspx.cs">
+      <DependentUpon>webQualificationsData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webQualificationsData.aspx.designer.cs">
+      <DependentUpon>webQualificationsData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webStoreData.aspx.cs">
+      <DependentUpon>webStoreData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webStoreData.aspx.designer.cs">
+      <DependentUpon>webStoreData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webSupplierData.aspx.cs">
+      <DependentUpon>webSupplierData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webSupplierData.aspx.designer.cs">
+      <DependentUpon>webSupplierData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webSupplierTypeData.aspx.cs">
+      <DependentUpon>webSupplierTypeData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webSupplierTypeData.aspx.designer.cs">
+      <DependentUpon>webSupplierTypeData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\webUsers.aspx.cs">
+      <DependentUpon>webUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\webUsers.aspx.designer.cs">
+      <DependentUpon>webUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\wemPointOfSales.aspx.cs">
+      <DependentUpon>wemPointOfSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\wemPointOfSales.aspx.designer.cs">
+      <DependentUpon>wemPointOfSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainData\wenItemUnit.aspx.cs">
+      <DependentUpon>wenItemUnit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainData\wenItemUnit.aspx.designer.cs">
+      <DependentUpon>wenItemUnit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptAreaData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAreaData.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptCity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCity.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptCountry.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCountry.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptDepartment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDepartment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptDivision.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDivision.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptEmployeeClient.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEmployeeClient.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptGovernorate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGovernorate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptIProudctionLineItems.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptIProudctionLineItems.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptItemColor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptItemColor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptItemLocation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptItemLocation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptItemsGroup.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptItemsGroup.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptItemType.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptItemType.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptItemUnit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptItemUnit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptJops.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptJops.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptNormalClient.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptNormalClient.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptNormalEmployee.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptNormalEmployee.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptNormalItems.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptNormalItems.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptNormalSupplier.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptNormalSupplier.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptPermission.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPermission.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptPointOfSale.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPointOfSale.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptProductionLine.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProductionLine.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptQualifications.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptQualifications.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptSpecClient.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSpecClient.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptSpecEmployee.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSpecEmployee.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptSpecItems.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSpecItems.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptSpecSupplier.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSpecSupplier.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptStores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptStores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptSupplierType.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSupplierType.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\Reports\rptUsers.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptUsers.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainReport\rptClientReport.aspx.cs">
+      <DependentUpon>rptClientReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\rptClientReport.aspx.designer.cs">
+      <DependentUpon>rptClientReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webAreaReport.aspx.cs">
+      <DependentUpon>webAreaReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webAreaReport.aspx.designer.cs">
+      <DependentUpon>webAreaReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webCityReport.aspx.cs">
+      <DependentUpon>webCityReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webCityReport.aspx.designer.cs">
+      <DependentUpon>webCityReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webCountryReport.aspx.cs">
+      <DependentUpon>webCountryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webCountryReport.aspx.designer.cs">
+      <DependentUpon>webCountryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webDepartmentReport.aspx.cs">
+      <DependentUpon>webDepartmentReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webDepartmentReport.aspx.designer.cs">
+      <DependentUpon>webDepartmentReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webDivisionReport.aspx.cs">
+      <DependentUpon>webDivisionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webDivisionReport.aspx.designer.cs">
+      <DependentUpon>webDivisionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webEmployeeClientReport.aspx.cs">
+      <DependentUpon>webEmployeeClientReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webEmployeeClientReport.aspx.designer.cs">
+      <DependentUpon>webEmployeeClientReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webEmployeeReport.aspx.cs">
+      <DependentUpon>webEmployeeReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webEmployeeReport.aspx.designer.cs">
+      <DependentUpon>webEmployeeReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webGovernorateReport.aspx.cs">
+      <DependentUpon>webGovernorateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webGovernorateReport.aspx.designer.cs">
+      <DependentUpon>webGovernorateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webItemColorReport.aspx.cs">
+      <DependentUpon>webItemColorReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webItemColorReport.aspx.designer.cs">
+      <DependentUpon>webItemColorReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webItemGroupData.aspx.cs">
+      <DependentUpon>webItemGroupData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webItemGroupData.aspx.designer.cs">
+      <DependentUpon>webItemGroupData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webItemLocationReport.aspx.cs">
+      <DependentUpon>webItemLocationReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webItemLocationReport.aspx.designer.cs">
+      <DependentUpon>webItemLocationReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webItemReport.aspx.cs">
+      <DependentUpon>webItemReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webItemReport.aspx.designer.cs">
+      <DependentUpon>webItemReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webItemTypeReport.aspx.cs">
+      <DependentUpon>webItemTypeReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webItemTypeReport.aspx.designer.cs">
+      <DependentUpon>webItemTypeReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webItemUnitReport.aspx.cs">
+      <DependentUpon>webItemUnitReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webItemUnitReport.aspx.designer.cs">
+      <DependentUpon>webItemUnitReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webJobsReport.aspx.cs">
+      <DependentUpon>webJobsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webJobsReport.aspx.designer.cs">
+      <DependentUpon>webJobsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webPermissionReport.aspx.cs">
+      <DependentUpon>webPermissionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webPermissionReport.aspx.designer.cs">
+      <DependentUpon>webPermissionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webPointOfSaleReport.aspx.cs">
+      <DependentUpon>webPointOfSaleReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webPointOfSaleReport.aspx.designer.cs">
+      <DependentUpon>webPointOfSaleReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webProductionLine.aspx.cs">
+      <DependentUpon>webProductionLine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webProductionLine.aspx.designer.cs">
+      <DependentUpon>webProductionLine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webProductionLineItemReport.aspx.cs">
+      <DependentUpon>webProductionLineItemReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webProductionLineItemReport.aspx.designer.cs">
+      <DependentUpon>webProductionLineItemReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webQualificationsReport.aspx.cs">
+      <DependentUpon>webQualificationsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webQualificationsReport.aspx.designer.cs">
+      <DependentUpon>webQualificationsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webStoreReport.aspx.cs">
+      <DependentUpon>webStoreReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webStoreReport.aspx.designer.cs">
+      <DependentUpon>webStoreReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webSupplierReport.aspx.cs">
+      <DependentUpon>webSupplierReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webSupplierReport.aspx.designer.cs">
+      <DependentUpon>webSupplierReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webSupplierTypeReport.aspx.cs">
+      <DependentUpon>webSupplierTypeReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webSupplierTypeReport.aspx.designer.cs">
+      <DependentUpon>webSupplierTypeReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainReport\webUsersReport.aspx.cs">
+      <DependentUpon>webUsersReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainReport\webUsersReport.aspx.designer.cs">
+      <DependentUpon>webUsersReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyMater.Master.cs">
+      <DependentUpon>MyMater.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyMater.Master.designer.cs">
+      <DependentUpon>MyMater.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp.aspx.cs">
+      <DependentUpon>PopUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopUp.aspx.designer.cs">
+      <DependentUpon>PopUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prodction\webAcceptedDeliveryOrder.aspx.cs">
+      <DependentUpon>webAcceptedDeliveryOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prodction\webAcceptedDeliveryOrder.aspx.designer.cs">
+      <DependentUpon>webAcceptedDeliveryOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prodction\webDeliveryOrder.aspx.cs">
+      <DependentUpon>webDeliveryOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prodction\webDeliveryOrder.aspx.designer.cs">
+      <DependentUpon>webDeliveryOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prodction\webDisProductionOrder.aspx.cs">
+      <DependentUpon>webDisProductionOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prodction\webDisProductionOrder.aspx.designer.cs">
+      <DependentUpon>webDisProductionOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prodction\webItemContentData.aspx.cs">
+      <DependentUpon>webItemContentData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prodction\webItemContentData.aspx.designer.cs">
+      <DependentUpon>webItemContentData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prodction\webProductionOrder.aspx.cs">
+      <DependentUpon>webProductionOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prodction\webProductionOrder.aspx.designer.cs">
+      <DependentUpon>webProductionOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prodction\webUpdateItemContent.aspx.cs">
+      <DependentUpon>webUpdateItemContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prodction\webUpdateItemContent.aspx.designer.cs">
+      <DependentUpon>webUpdateItemContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionReport\Report\rptAcceptedDeliveryOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAcceptedDeliveryOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProductionReport\Report\rptContentItem.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptContentItem.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProductionReport\Report\rptDeliveryOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDeliveryOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProductionReport\Report\rptDicProductionOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDicProductionOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProductionReport\Report\rptProductioOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProductioOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProductionReport\webAcceeptedDeliveryOrder.aspx.cs">
+      <DependentUpon>webAcceeptedDeliveryOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductionReport\webAcceeptedDeliveryOrder.aspx.designer.cs">
+      <DependentUpon>webAcceeptedDeliveryOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionReport\webContentReport.aspx.cs">
+      <DependentUpon>webContentReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductionReport\webContentReport.aspx.designer.cs">
+      <DependentUpon>webContentReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionReport\webDeliveryOrderReport.aspx.cs">
+      <DependentUpon>webDeliveryOrderReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductionReport\webDeliveryOrderReport.aspx.designer.cs">
+      <DependentUpon>webDeliveryOrderReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionReport\webProductionOrderReport.aspx.cs">
+      <DependentUpon>webProductionOrderReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductionReport\webProductionOrderReport.aspx.designer.cs">
+      <DependentUpon>webProductionOrderReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseData\webConformPurchaseOrder.aspx.cs">
+      <DependentUpon>webConformPurchaseOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseData\webConformPurchaseOrder.aspx.designer.cs">
+      <DependentUpon>webConformPurchaseOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseData\webFollowUpPurchaseOrder.aspx.cs">
+      <DependentUpon>webFollowUpPurchaseOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseData\webFollowUpPurchaseOrder.aspx.designer.cs">
+      <DependentUpon>webFollowUpPurchaseOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseData\webPricingSupplyOrder.aspx.cs">
+      <DependentUpon>webPricingSupplyOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseData\webPricingSupplyOrder.aspx.designer.cs">
+      <DependentUpon>webPricingSupplyOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseData\webPurchaseOrderData.aspx.cs">
+      <DependentUpon>webPurchaseOrderData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseData\webPurchaseOrderData.aspx.designer.cs">
+      <DependentUpon>webPurchaseOrderData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseData\webSupplyOrderData.aspx.cs">
+      <DependentUpon>webSupplyOrderData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseData\webSupplyOrderData.aspx.designer.cs">
+      <DependentUpon>webSupplyOrderData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseData\webUpdateSupplyOrder.aspx.cs">
+      <DependentUpon>webUpdateSupplyOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseData\webUpdateSupplyOrder.aspx.designer.cs">
+      <DependentUpon>webUpdateSupplyOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseReport\Report\rptGetAllConformedPurchaseOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGetAllConformedPurchaseOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport\Report\rptGetAllPurchaseOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGetAllPurchaseOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport\Report\rptGetAllUnConformedPurchaseOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGetAllUnConformedPurchaseOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport\Report\rptGetConformPurchaseOrderData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGetConformPurchaseOrderData.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport\Report\rptGetPurchaseOrderData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGetPurchaseOrderData.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport\Report\rptGetSupplyOrderData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGetSupplyOrderData.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport\Report\rptGetSupplyOrderDataWithOutPrice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGetSupplyOrderDataWithOutPrice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport\webAllConformPurchaseOrder.aspx.cs">
+      <DependentUpon>webAllConformPurchaseOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport\webAllConformPurchaseOrder.aspx.designer.cs">
+      <DependentUpon>webAllConformPurchaseOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseReport\webAllPurchaseOrderReport.aspx.cs">
+      <DependentUpon>webAllPurchaseOrderReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport\webAllPurchaseOrderReport.aspx.designer.cs">
+      <DependentUpon>webAllPurchaseOrderReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseReport\webAllUnConfomedPurchaseOrder.aspx.cs">
+      <DependentUpon>webAllUnConfomedPurchaseOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport\webAllUnConfomedPurchaseOrder.aspx.designer.cs">
+      <DependentUpon>webAllUnConfomedPurchaseOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseReport\webConformPurchaseOrderReport.aspx.cs">
+      <DependentUpon>webConformPurchaseOrderReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport\webConformPurchaseOrderReport.aspx.designer.cs">
+      <DependentUpon>webConformPurchaseOrderReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseReport\webPurchaseOrderRepot.aspx.cs">
+      <DependentUpon>webPurchaseOrderRepot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport\webPurchaseOrderRepot.aspx.designer.cs">
+      <DependentUpon>webPurchaseOrderRepot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseReport\webSupplyOrderData.aspx.cs">
+      <DependentUpon>webSupplyOrderData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport\webSupplyOrderData.aspx.designer.cs">
+      <DependentUpon>webSupplyOrderData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseReport\webSupplyOrderWithOutPrice.aspx.cs">
+      <DependentUpon>webSupplyOrderWithOutPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseReport\webSupplyOrderWithOutPrice.aspx.designer.cs">
+      <DependentUpon>webSupplyOrderWithOutPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport\Reports\rptAskedOrderPricing.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAskedOrderPricing.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesReport\Reports\rptAskedOrderPricingShow.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAskedOrderPricingShow.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesReport\Reports\rptAskedOrderPricingWithoutNo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAskedOrderPricingWithoutNo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesReport\Reports\rptCommodityPricing.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCommodityPricing.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesReport\Reports\rptCommodityPricingShow.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCommodityPricingShow.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesReport\Reports\rptCommodityPricingWithoutNo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCommodityPricingWithoutNo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesReport\Reports\rptCorruptedPricing.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCorruptedPricing.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesReport\Reports\rptCorruptedPricingShow.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCorruptedPricingShow.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesReport\Reports\rptCorruptedPricingWithoutNo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCorruptedPricingWithoutNo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesReport\Reports\rptGiftsPricing.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGiftsPricing.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesReport\Reports\rptGiftsPricingShow.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGiftsPricingShow.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesReport\Reports\rptGiftsPricingWithoutNo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGiftsPricingWithoutNo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesReport\Reports\rptRowExchangePricing.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRowExchangePricing.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesReport\Reports\rptRowExchangePricingShow.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRowExchangePricingShow.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesReport\Reports\rptRowExchangePricingWithoutNo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRowExchangePricingWithoutNo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesReport\webAskedOrderReport.aspx.cs">
+      <DependentUpon>webAskedOrderReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesReport\webAskedOrderReport.aspx.designer.cs">
+      <DependentUpon>webAskedOrderReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport\webCommdityPricingReport.aspx.cs">
+      <DependentUpon>webCommdityPricingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesReport\webCommdityPricingReport.aspx.designer.cs">
+      <DependentUpon>webCommdityPricingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport\webCorruptedPricingReport.aspx.cs">
+      <DependentUpon>webCorruptedPricingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesReport\webCorruptedPricingReport.aspx.designer.cs">
+      <DependentUpon>webCorruptedPricingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport\webGiftPricing.aspx.cs">
+      <DependentUpon>webGiftPricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesReport\webGiftPricing.aspx.designer.cs">
+      <DependentUpon>webGiftPricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SalesReport\WebRowExchangePricingReport.aspx.cs">
+      <DependentUpon>WebRowExchangePricingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesReport\WebRowExchangePricingReport.aspx.designer.cs">
+      <DependentUpon>WebRowExchangePricingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\webAskedOrderPricing.aspx.cs">
+      <DependentUpon>webAskedOrderPricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\webAskedOrderPricing.aspx.designer.cs">
+      <DependentUpon>webAskedOrderPricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\webCommodityPrice.aspx.cs">
+      <DependentUpon>webCommodityPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\webCommodityPrice.aspx.designer.cs">
+      <DependentUpon>webCommodityPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\webcorruptedPricing.aspx.cs">
+      <DependentUpon>webcorruptedPricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\webcorruptedPricing.aspx.designer.cs">
+      <DependentUpon>webcorruptedPricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\webGiftsPricing.aspx.cs">
+      <DependentUpon>webGiftsPricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\webGiftsPricing.aspx.designer.cs">
+      <DependentUpon>webGiftsPricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\webItemPrice.aspx.cs">
+      <DependentUpon>webItemPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\webItemPrice.aspx.designer.cs">
+      <DependentUpon>webItemPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\webMaterialPrice.aspx.cs">
+      <DependentUpon>webMaterialPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\webMaterialPrice.aspx.designer.cs">
+      <DependentUpon>webMaterialPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreData\webConformAudit.aspx.cs">
+      <DependentUpon>webConformAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreData\webConformAudit.aspx.designer.cs">
+      <DependentUpon>webConformAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreData\webConvertBetweenMainQtyAndTester.aspx.cs">
+      <DependentUpon>webConvertBetweenMainQtyAndTester.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreData\webConvertBetweenMainQtyAndTester.aspx.designer.cs">
+      <DependentUpon>webConvertBetweenMainQtyAndTester.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreData\webDierctSellOrderData.aspx.cs">
+      <DependentUpon>webDierctSellOrderData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreData\webDierctSellOrderData.aspx.designer.cs">
+      <DependentUpon>webDierctSellOrderData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreData\webDisExchangeReqest.aspx.cs">
+      <DependentUpon>webDisExchangeReqest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreData\webDisExchangeReqest.aspx.designer.cs">
+      <DependentUpon>webDisExchangeReqest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreData\webDisRefluxOrder.aspx.cs">
+      <DependentUpon>webDisRefluxOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreData\webDisRefluxOrder.aspx.designer.cs">
+      <DependentUpon>webDisRefluxOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreData\webExchangeRequest.aspx.cs">
+      <DependentUpon>webExchangeRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreData\webExchangeRequest.aspx.designer.cs">
+      <DependentUpon>webExchangeRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreData\webInsertFirstTimeBalance.aspx.cs">
+      <DependentUpon>webInsertFirstTimeBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreData\webInsertFirstTimeBalance.aspx.designer.cs">
+      <DependentUpon>webInsertFirstTimeBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreData\webRecordReceiptData.aspx.cs">
+      <DependentUpon>webRecordReceiptData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreData\webRecordReceiptData.aspx.designer.cs">
+      <DependentUpon>webRecordReceiptData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreData\webRefluxOrder.aspx.cs">
+      <DependentUpon>webRefluxOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreData\webRefluxOrder.aspx.designer.cs">
+      <DependentUpon>webRefluxOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreData\webUpdateExchangeRequest.aspx.cs">
+      <DependentUpon>webUpdateExchangeRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreData\webUpdateExchangeRequest.aspx.designer.cs">
+      <DependentUpon>webUpdateExchangeRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreData\webUpdateFirstTimeBalance.aspx.cs">
+      <DependentUpon>webUpdateFirstTimeBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreData\webUpdateFirstTimeBalance.aspx.designer.cs">
+      <DependentUpon>webUpdateFirstTimeBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreData\webUpdateRecordReceiptData.aspx.cs">
+      <DependentUpon>webUpdateRecordReceiptData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreData\webUpdateRecordReceiptData.aspx.designer.cs">
+      <DependentUpon>webUpdateRecordReceiptData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreData\webUpdateRefluxOrederData.aspx.cs">
+      <DependentUpon>webUpdateRefluxOrederData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreData\webUpdateRefluxOrederData.aspx.designer.cs">
+      <DependentUpon>webUpdateRefluxOrederData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreReport\Report\rptAudit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAudit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StoreReport\Report\rptCheckAudit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCheckAudit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StoreReport\Report\rptDierctSellOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDierctSellOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StoreReport\Report\rptExchangeRequestOrderReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptExchangeRequestOrderReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StoreReport\Report\rptExchangeRequestReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptExchangeRequestReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StoreReport\Report\rptFirstTimeBalance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFirstTimeBalance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StoreReport\Report\rptGroupItemBalance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGroupItemBalance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StoreReport\Report\rptIncommingOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptIncommingOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StoreReport\Report\rptItemBinCard.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptItemBinCard.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StoreReport\Report\rptPointForEmployee.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPointForEmployee.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StoreReport\Report\rptRecordReceipt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRecordReceipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StoreReport\Report\rptRefluxHeaderData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRefluxHeaderData.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StoreReport\Report\rptStoreBalance.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptStoreBalance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StoreReport\webAuditReport.aspx.cs">
+      <DependentUpon>webAuditReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreReport\webAuditReport.aspx.designer.cs">
+      <DependentUpon>webAuditReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreReport\webCheckAuditReport.aspx.cs">
+      <DependentUpon>webCheckAuditReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreReport\webCheckAuditReport.aspx.designer.cs">
+      <DependentUpon>webCheckAuditReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreReport\webExchangeRequestReport.aspx.cs">
+      <DependentUpon>webExchangeRequestReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreReport\webExchangeRequestReport.aspx.designer.cs">
+      <DependentUpon>webExchangeRequestReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreReport\webFirstTimwBalanceReport.aspx.cs">
+      <DependentUpon>webFirstTimwBalanceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreReport\webFirstTimwBalanceReport.aspx.designer.cs">
+      <DependentUpon>webFirstTimwBalanceReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreReport\webIncommingOrderReport.aspx.cs">
+      <DependentUpon>webIncommingOrderReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreReport\webIncommingOrderReport.aspx.designer.cs">
+      <DependentUpon>webIncommingOrderReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreReport\webItemBinCard.aspx.cs">
+      <DependentUpon>webItemBinCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreReport\webItemBinCard.aspx.designer.cs">
+      <DependentUpon>webItemBinCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreReport\webItemGroupBalance.aspx.cs">
+      <DependentUpon>webItemGroupBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreReport\webItemGroupBalance.aspx.designer.cs">
+      <DependentUpon>webItemGroupBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreReport\webRecordReceiptReport.aspx.cs">
+      <DependentUpon>webRecordReceiptReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreReport\webRecordReceiptReport.aspx.designer.cs">
+      <DependentUpon>webRecordReceiptReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreReport\webrptDierctSellOreder.aspx.cs">
+      <DependentUpon>webrptDierctSellOreder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreReport\webrptDierctSellOreder.aspx.designer.cs">
+      <DependentUpon>webrptDierctSellOreder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreReport\webrptExchangeRequestOrderReport.aspx.cs">
+      <DependentUpon>webrptExchangeRequestOrderReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreReport\webrptExchangeRequestOrderReport.aspx.designer.cs">
+      <DependentUpon>webrptExchangeRequestOrderReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreReport\webrptPointForEmployee.aspx.cs">
+      <DependentUpon>webrptPointForEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreReport\webrptPointForEmployee.aspx.designer.cs">
+      <DependentUpon>webrptPointForEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreReport\webrptRefluxHeaderData.aspx.cs">
+      <DependentUpon>webrptRefluxHeaderData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreReport\webrptRefluxHeaderData.aspx.designer.cs">
+      <DependentUpon>webrptRefluxHeaderData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreReport\webStoreBalanceReport.aspx.cs">
+      <DependentUpon>webStoreBalanceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreReport\webStoreBalanceReport.aspx.designer.cs">
+      <DependentUpon>webStoreBalanceReport.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MyMater.Master" />
+    <Content Include="packages.config" />
+    <EntityDeploy Include="DataBase\AdamDataBata.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AdamDataBata.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DataBase\AdamDataBata.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AdamDataBata.edmx</DependentUpon>
+      <LastGenOutput>AdamDataBata.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataBase\AdamDataBata.edmx.diagram">
+      <DependentUpon>AdamDataBata.edmx</DependentUpon>
+    </Content>
+    <Content Include="DataBase\AdamDataBata.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AdamDataBata.edmx</DependentUpon>
+      <LastGenOutput>AdamDataBata.cs</LastGenOutput>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AccountReport\Report\rptAccount.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAccount.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReport\Report\rptAccountStatement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAccountStatement.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReport\Report\rptBalanceSheet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBalanceSheet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReport\Report\rptBoxData.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBoxData.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReport\Report\rptCashExense.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCashExense.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReport\Report\rptCashReceipts.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCashReceipts.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReport\Report\rptCostCenter.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCostCenter.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReport\Report\rptCurrency.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCurrency.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReport\Report\rptFirstJournalBalance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFirstJournalBalance.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReport\Report\rptJournal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptJournal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReport\Report\rptMezanElMorag3a.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMezanElMorag3a.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReport\Report\rptProfitAndLoss.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProfitAndLoss.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReport\Report\rptUnPostedJournal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptUnPostedJournal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CostsReport\Reports\rptClientFollowUp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptClientFollowUp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CostsReport\Reports\rptExchangeReqestFollowUp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptExchangeReqestFollowUp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CostsReport\Reports\rptItemFollowUp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptItemFollowUp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CostsReport\Reports\rptPurchaseOrderFollowUp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPurchaseOrderFollowUp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CostsReport\Reports\rptStoreCheck.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptStoreCheck.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CostsReport\Reports\rptSupplierFollowUp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSupplierFollowUp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptAreaData.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAreaData.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptCity.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCity.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptCountry.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCountry.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptDepartment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDepartment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptDivision.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDivision.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptEmployeeClient.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEmployeeClient.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptGovernorate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGovernorate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptIProudctionLineItems.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptIProudctionLineItems.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptItemColor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptItemColor.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptItemLocation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptItemLocation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptItemsGroup.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptItemsGroup.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptItemType.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptItemType.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptItemUnit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptItemUnit.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptJops.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptJops.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptNormalClient.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNormalClient.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptNormalEmployee.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNormalEmployee.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptNormalItems.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNormalItems.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptNormalSupplier.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNormalSupplier.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptPermission.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPermission.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptPointOfSale.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPointOfSale.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptProductionLine.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProductionLine.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptQualifications.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptQualifications.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptSpecClient.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSpecClient.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptSpecEmployee.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSpecEmployee.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptSpecItems.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSpecItems.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptSpecSupplier.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSpecSupplier.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptStores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptStores.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptSupplierType.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSupplierType.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainReport\Reports\rptUsers.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptUsers.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReport\Report\rptAcceptedDeliveryOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAcceptedDeliveryOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReport\Report\rptContentItem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptContentItem.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReport\Report\rptDeliveryOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDeliveryOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReport\Report\rptDicProductionOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDicProductionOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReport\Report\rptProductioOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProductioOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseReport\Report\rptGetAllConformedPurchaseOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGetAllConformedPurchaseOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseReport\Report\rptGetAllPurchaseOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGetAllPurchaseOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseReport\Report\rptGetAllUnConformedPurchaseOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGetAllUnConformedPurchaseOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseReport\Report\rptGetConformPurchaseOrderData.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGetConformPurchaseOrderData.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseReport\Report\rptGetPurchaseOrderData.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGetPurchaseOrderData.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseReport\Report\rptGetSupplyOrderData.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGetSupplyOrderData.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseReport\Report\rptGetSupplyOrderDataWithOutPrice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGetSupplyOrderDataWithOutPrice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport\Reports\rptAskedOrderPricing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAskedOrderPricing.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport\Reports\rptAskedOrderPricingShow.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAskedOrderPricingShow.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport\Reports\rptAskedOrderPricingWithoutNo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAskedOrderPricingWithoutNo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport\Reports\rptCommodityPricing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCommodityPricing.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport\Reports\rptCommodityPricingShow.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCommodityPricingShow.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport\Reports\rptCommodityPricingWithoutNo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCommodityPricingWithoutNo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport\Reports\rptCorruptedPricing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCorruptedPricing.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport\Reports\rptCorruptedPricingShow.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCorruptedPricingShow.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport\Reports\rptCorruptedPricingWithoutNo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCorruptedPricingWithoutNo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport\Reports\rptGiftsPricing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGiftsPricing.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport\Reports\rptGiftsPricingShow.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGiftsPricingShow.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport\Reports\rptGiftsPricingWithoutNo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGiftsPricingWithoutNo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport\Reports\rptRowExchangePricing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRowExchangePricing.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport\Reports\rptRowExchangePricingShow.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRowExchangePricingShow.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport\Reports\rptRowExchangePricingWithoutNo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRowExchangePricingWithoutNo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreReport\Report\rptAudit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAudit.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreReport\Report\rptCheckAudit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCheckAudit.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreReport\Report\rptDierctSellOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDierctSellOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreReport\Report\rptExchangeRequestOrderReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptExchangeRequestOrderReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreReport\Report\rptExchangeRequestReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptExchangeRequestReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreReport\Report\rptFirstTimeBalance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFirstTimeBalance.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreReport\Report\rptGroupItemBalance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGroupItemBalance.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreReport\Report\rptIncommingOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptIncommingOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreReport\Report\rptItemBinCard.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptItemBinCard.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreReport\Report\rptPointForEmployee.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPointForEmployee.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreReport\Report\rptRecordReceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRecordReceipt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreReport\Report\rptRefluxHeaderData.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRefluxHeaderData.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreReport\Report\rptStoreBalance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptStoreBalance.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8606/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

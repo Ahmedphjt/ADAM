@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c381c33cccf54b27808645fa8617d6be" Name="Diagram1">
+        <EntityTypeShape EntityType="ADAMContext.Account" Width="1.5" PointX="10.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.AccountHelper" Width="1.5" PointX="12.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.AreaData" Width="1.5" PointX="1.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.AuditDetail" Width="1.5" PointX="20" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.AuditHeader" Width="1.5" PointX="17.75" PointY="31.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.BalanceSheet" Width="1.5" PointX="12.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.BoxData" Width="1.5" PointX="7.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.CityData" Width="1.5" PointX="1.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ClientData" Width="1.5" PointX="6" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.CostCenter" Width="1.5" PointX="12.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.CountryData" Width="1.5" PointX="1.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.CurrencyData" Width="1.5" PointX="9.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.DeliveryDataDetail" Width="1.5" PointX="8.25" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.DeliveryDataHeader" Width="1.5" PointX="3" PointY="28.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.Department" Width="1.5" PointX="1.5" PointY="45.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.DierctSellDetail" Width="1.5" PointX="10.25" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.DirectSellData" Width="1.5" PointX="6" PointY="29.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.division" Width="1.5" PointX="1.5" PointY="48.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.DocumentDetail" Width="1.5" PointX="13" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.DocumentHeader" Width="1.5" PointX="10.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.EmployeeData" Width="1.5" PointX="3.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ExchangeRequestDetailsData" Width="1.5" PointX="8.25" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ExchangeRequestHeaderData" Width="1.5" PointX="6" PointY="51.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ExchangeRequestPricing" Width="1.5" PointX="10.5" PointY="40.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.GovernorateData" Width="1.5" PointX="1.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.IncommingOrderData" Width="1.5" PointX="5.25" PointY="34.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ItemColor" Width="1.5" PointX="0.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ItemColorSelected" Width="1.5" PointX="11.25" PointY="37.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ItemContentDetail" Width="1.5" PointX="3" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ItemContentHeader" Width="1.5" PointX="0.75" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ItemLocation" Width="1.5" PointX="3" PointY="42.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ItemMovement" Width="1.5" PointX="5.25" PointY="40.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ItemPrice" Width="1.5" PointX="14.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.Item" Width="1.5" PointX="3" PointY="33.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ItemsGroup" Width="1.5" PointX="2.75" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ItemStatu" Width="1.5" PointX="0.75" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ItemType" Width="1.5" PointX="0.75" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ItemTypeProdcutionLine" Width="1.5" PointX="6" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ItemUnit" Width="1.5" PointX="0.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.Job" Width="1.5" PointX="1.5" PointY="51.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.JournalDetail" Width="1.5" PointX="10.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.JournalHeader" Width="1.5" PointX="8" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.JournalType" Width="1.5" PointX="5.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.MasterAccountType" Width="1.5" PointX="14.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.MovmentName" Width="1.5" PointX="3" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.Operation" Width="1.5" PointX="5.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.PagesName" Width="1.5" PointX="5.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.PaymentType" Width="1.5" PointX="14.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.Permission" Width="1.5" PointX="8" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.PointOfSale" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ProductionDetailsOrder" Width="1.5" PointX="8" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ProductionHeaderOrder" Width="1.5" PointX="5.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ProductionLine" Width="1.5" PointX="0.75" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.ProfitAndLoss" Width="1.5" PointX="15.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.PurchaseItemStatu" Width="1.5" PointX="11" PointY="30.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.PurchaseOrderHeader" Width="1.5" PointX="8" PointY="32.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.PurchaseOredrDetail" Width="1.5" PointX="13.25" PointY="32" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.QualificationsData" Width="1.5" PointX="1.5" PointY="54.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.RecordReceiptDetail" Width="1.5" PointX="17.75" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.RecordReceiptHeader" Width="1.5" PointX="15.5" PointY="36" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.RefluxDetailsData" Width="1.5" PointX="5.25" PointY="47.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.RefluxHeaderData" Width="1.5" PointX="3" PointY="59.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.SexData" Width="1.5" PointX="0.75" PointY="41.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.StoreData" Width="1.5" PointX="3" PointY="63.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.SupplierData" Width="1.5" PointX="11" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.SupplierType" Width="1.5" PointX="8.75" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.SupplyOrderDetail" Width="1.5" PointX="15.5" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.SupplyOrderHeader" Width="1.5" PointX="13.25" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.sysdiagram" Width="1.5" PointX="14.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADAMContext.UserData" Width="1.5" PointX="5.75" PointY="56.125" IsExpanded="true" />
+        <AssociationConnector Association="ADAMContext.FK_AreaData_GovernorateData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ClientData_AreaData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_EmployeeData_AreaData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_SupplierData_AreaData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_AuditDetails_AuditHeader" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_AuditDetails_RecordReceiptDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_IncommingOrderData_AuditDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_CityData_CountryData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ClientData_CityData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_EmployeeData_CityData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_GovernorateData_CityData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_PointOfSales_CityData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_SupplierData_CityData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ClientData_CountryData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ClientData_EmployeeData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ClientData_GovernorateData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ClientData_Jobs" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_EmployeeData_CountryData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_PointOfSales_CountryData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_SupplierData_CountryData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_DeliveryDataDetails_DeliveryDataHeader" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_DeliveryDataDetails_ItemColor" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_DeliveryDataDetails_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_DeliveryDataHeader_ItemType" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_DeliveryDataHeader_ProductionLine" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_division_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_EmployeeData_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_PurchaseOrderHeader_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_DierctSellDetails_DirectSellData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_DierctSellDetails_ItemColor" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_DierctSellDetails_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_DirectSellData_EmployeeData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_DirectSellData_ItemType" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_EmployeeData_division" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_PurchaseOrderHeader_division" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_DocumentDetails_DocumentHeader" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_EmployeeData_GovernorateData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_EmployeeData_Jobs" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_EmployeeData_QualificationsData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ExchangeRequestDetailsData_ExchangeRequestHeaderData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ExchangeRequestDetailsData_ItemColor" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ExchangeRequestDetailsData_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ExchangeRequestPricing_ExchangeRequestDetailsData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_SupplierData_GovernorateData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_IncommingOrderData_ItemLocation" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_IncommingOrderData_ItemType" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_IncommingOrderData_RecordReceiptDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ItemColorSelected_ItemColor" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ItemContentDetails_ItemColor" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ItemMovement_ItemColor" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_PurchaseOredrDetails_ItemColor" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_RefluxDetailsData_ItemColor" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ItemColorSelected_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ItemContentDetails_ItemContentHeader" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ItemContentDetails_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ItemContentDetails_ItemType" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ItemLocation_ItemType" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ItemMovement_ItemLocation" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ItemMovement_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ItemMovement_ItemUnit" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ItemMovement_MovmentName" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ItemMovement_StoreData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ItemMovement_StoreData1" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_Items_ItemStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_Items_ItemType" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_Items_ItemUnit" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_Items_ProductionLine" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_Items_SexData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_PurchaseOredrDetails_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_RecordReceiptDetails_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_RefluxDetailsData_Items" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ItemTypeProdcutionLine_ItemType" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_PurchaseOrderHeader_ItemType" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_RefluxHeaderData_ItemType" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ItemTypeProdcutionLine_ProductionLine" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_SupplierData_Jobs" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_JournalDetail_JournalHeader" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_JournalHeader_JournalType" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_Permission_Operations" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_Permission_PagesName" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_Permission_UserData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_ProductionDetailsOrder_ProductionHeaderOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_PurchaseOredrDetails_PurchaseItemStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_PurchaseOredrDetails_PurchaseOrderHeader" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_SupplyOrderDetails_PurchaseOredrDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_RecordReceiptDetails_RecordReceiptHeader" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_RecordReceiptDetails_SupplyOrderDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_RefluxDetailsData_RefluxHeaderData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_SupplierData_SupplierType" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_SupplyOrderHeader_SupplierData" ManuallyRouted="false" />
+        <AssociationConnector Association="ADAMContext.FK_SupplyOrderDetails_SupplyOrderHeader" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
